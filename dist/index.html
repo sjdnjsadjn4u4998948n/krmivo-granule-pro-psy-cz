@@ -18,7 +18,7 @@
 <style>
 
 :root {
-    --k-ff05:   #c9c9c9;
+    --k-ff05:   #aaaaaa;
     --b-ah72: #ff7a52;
     --h-cl82:     #9e9e9e;
     --f-ai11:   #ffffff;
@@ -128,6 +128,7 @@ ul,ol{padding-left:1.4em;margin-bottom:1em}
     background: rgb(0 0 0 / 34%);
     border-radius: 4px;
     padding: 4px 7px;
+    text-align: center;
     color: ;
     display: inline-block;
 }
@@ -199,7 +200,7 @@ ul,ol{padding-left:1.4em;margin-bottom:1em}
 
 .g-dk98{width:100%;border-collapse:collapse}
 .g-dk98 thead th{
-    background:#c9c9c9;color:#fff;
+    background:#aaaaaa;color:#fff;
     padding:12px 14px;text-align:left;font-size:.85em;
 }
 .g-dk98 tbody tr:nth-child(odd) td{background:#282632}
@@ -329,24 +330,39 @@ footer p{
 .k-oh54{
     position:fixed;bottom:24px;right:24px;
     width:42px;height:42px;border-radius:50%;
-    background:#c9c9c9;
+    background:#aaaaaa;
     display:none;align-items:center;justify-content:center;
     cursor:pointer;z-index:999;
 }
 .k-oh54.p-ch00{display:flex}
 
 .m-ld793{
-    position:fixed;bottom:20px;left:20px;z-index:9999;
-    border-radius:10px;padding:14px 18px;max-width:260px;
-    box-shadow:0 4px 20px rgba(0,0,0,.2);
+    position:fixed;bottom:0;left:0;width:100%;z-index:9999;
+    padding:10px 0;color:#fff!important;
 }
-.m-dn323{position:absolute;top:6px;right:10px;cursor:pointer;font-size:18px;opacity:.6}
-.g-ob37{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.g-ob37 img{max-height:36px}
+.m-ld793 .n-am22{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;
+}
+.m-ld793 img{max-width:150px;max-height:65px}
+.m-dn323{position:absolute;top:-8px;right:12px;font-size:32px;color:#fff;cursor:pointer;line-height:1;transition:.3s}
+.m-dn323:hover{transform:rotate(90deg)}
+.g-ob37{display:flex;align-items:center;justify-content:center;gap:40px}
+.g-ob37 p{font-weight:600;margin:0 0 .3em}
 .m-ld793 a{
-    display:block;text-align:center;padding:10px 18px;border-radius:2px;
-    background:linear-gradient(90deg, #ff756b 0%, #ff5454 100%), #f59e0b;color:#ffffff;
-    font-weight:700;font-size:.88em;margin-top:6px;
+    margin-right:2vw;border-radius:2px;
+    padding:12px 20px;text-decoration:none!important;transition:.5s;
+    color:#fff!important;font-weight:700;
+}
+.m-ld793 a:hover{transform:scale(1.05)}
+@media(max-width:991px){
+    .g-ob37{
+        gap:5px;
+        font-size: 13px;
+    }
+    .m-ld793 img{max-width:70px}
+    .m-ld793 .n-am22{gap:5px}
+    .m-dn323{top:-14px;right:1px;transform:scale(.9)}
+    .m-ld793 a{margin-right:0;font-size:.6em;padding:10px;margin-right:3px;white-space:nowrap}
 }
 .m-jd76{
     position:fixed;bottom:20px;left:20px;z-index:9999;display:flex;align-items:center;justify-content:center;
@@ -361,7 +377,7 @@ footer p{
 .d-ka24{width:100%;border-collapse:separate;border-spacing:0 8px}
 .g-kb04 th{
     background:linear-gradient(90deg, #ff756b 0%, #ff5454 100%), #f59e0b;color:#ffffff;
-    padding:10px 14px;text-align:center;font-size:.85em;font-weight:600;
+    padding:10px 14px;text-align:center;font-size:.65em;font-weight:600;
 }
  .j-di31 td:nth-child(3){
     text-align: center;
@@ -386,6 +402,10 @@ footer p{
     background:linear-gradient(90deg, #ff756b 0%, #ff5454 100%), #f59e0b;
     border-radius:2px 0 0 2px;
 }
+.j-di31 td:nth-child(2){
+    border-left:1px solid #ff3b4f;
+    border-radius:2px 0 0 2px;
+}
 .j-di31 td:last-child{
     border-right:1px solid #ff3b4f;
     border-radius:0 2px 2px 0;
@@ -400,7 +420,7 @@ footer p{
     margin: auto;}
 .c-of438{min-width:110px}
 .k-da39{font-weight:700;font-size:.92em;margin-bottom:5px;color:#ffffff}
-.l-en46{font-weight:700;font-size:.95em;color:#c9c9c9}
+.l-en46{font-weight:700;font-size:.95em;color:#aaaaaa}
 
 .m-nn248{
     display:inline-block;
@@ -468,7 +488,8 @@ footer p{
         .j-di31 td:nth-child(3) {
                 order: 3;
         text-align: center;
-                padding: 0 4px;
+                      padding: 4px 15px;
+        font-size: 1.4rem;
     }
         .j-di31 td:nth-child(4) {
               order: 2;
@@ -616,13 +637,27 @@ footer p{
     }
     .c-cp36{display:none}
     .o-pc35{grid-column:1/-1}
+    .g-dk98,
+    .g-dk98 tbody{display:block}
+    .g-dk98 thead{display:none}
+    .g-dk98 tr{
+        display:grid;grid-template-columns:40px 1fr;row-gap:10px;
+        background:#161327;
+        color:#ffffff;
+        border:1px solid #ff3b4f;
+        border-radius:12px;padding:18px 20px;margin-bottom:12px;
+    }
+    .g-dk98 td{display:block;border:none!important;padding:4px 0;background:transparent}
+    .k-mo52{display:none}
+    .g-ea81{display:none}
+    .f-ah18{grid-column:1/-1}
+    .f-ah18 .k-bj27{display:block;width:100%;text-align:center;box-sizing:border-box}
     .f-oi07{grid-template-columns:1fr}
     .j-jl15{grid-template-columns:1fr}
     .b-hc05{grid-template-columns:1fr}
     .k-ob05{grid-template-columns:1fr}
-    .j-ec31{grid-template-columns:1fr 1fr}
-        .j-ec31{display:none}
-        .a-db572{grid-template-columns:1fr}
+    .j-ec31{display:none}
+    .a-db572{grid-template-columns:1fr}
     .i-jb45 h1{font-size:1.45em}
     
     .l-ln18{
@@ -674,8 +709,8 @@ footer p{
             text-align: center;
             font-size: 13px;
             font-weight: bold;
-            color: #000000;
-            background: #fdf5f6;
+            color: #ffffff;
+            background: #161327;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .p-mb24 th:first-child { border-radius: 10px 0 0 10px; padding-left: 20px; text-align: left; }
@@ -683,9 +718,12 @@ footer p{
         @media (max-width:991px) { .p-mb24 { display: none; } }
 
         .a-lp50 { filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10)); }
+        .a-lp50 tr {
+            background: #161327;
+        }
         .a-lp50 td {
-            background: #fdf5f6;
-            color: #000000;
+            background: #161327;
+            color: #ffffff;
             vertical-align: middle;
             border-top: 2px solid var(--v4bc, transparent);
             border-bottom: 2px solid var(--v4bc, transparent);
@@ -724,19 +762,19 @@ footer p{
                 margin-left: -4px;
             object-fit: contain; display: block; margin: 0 auto;
         }
-        . {
+        .k-oj43 {
             width: 160px;
             padding: 16px 14px;
             vertical-align: middle;
         }
         .i-oe055 {
             font-size: 16px; font-weight: 700;
-            color: #000000;
+            color: #ffffff;
             margin-bottom: 6px;
         }
         .g-ea570 {
             display: flex; align-items: center; gap: 4px;
-            font-size: 13px; color: #000000;
+            font-size: 13px; color: #ffffff;
             flex-wrap: nowrap;
         }
         .g-ea570 span { font-weight: 600; white-space: nowrap; }
@@ -744,7 +782,7 @@ footer p{
         .p-fa51 { padding: 14px 14px; }
         .p-fa51 > div {
             font-size: 14px; font-weight: 700;
-            color: #000000;
+            color: #ffffff;
             border: 1px solid #ff3b4f;
             border-radius: 2px;
             padding: 8px 14px;
@@ -760,7 +798,7 @@ footer p{
         .j-bp992 ul li {
             font-size: 12px; display: flex; align-items: center; gap: 4px;
             padding: 3px 8px;
-            color: #000000;
+            color: #ffffff;
             background: rgba(201,48,80,0.14);
             border-radius: 2px;
         }
@@ -803,7 +841,7 @@ footer p{
         }
         .g-ai585 td > div {
             display: flex; align-items: center; gap: 12px;
-            font-size: 10.5px; color: #000000;
+            font-size: 10.5px; color: #ffffff;
             width: 100%!important;
         }
         .o-nj807 {
@@ -904,7 +942,7 @@ footer p{
     width: 49% !important;
         border: none !important;
             }
-             .a-lp50 .{
+             .a-lp50 .k-oj43{
                 display: flex;
                 align-items: start!important;
                 width:49% !important;
@@ -983,10 +1021,8 @@ footer p{
     <div class="o-ld54">
                     <img src="img/ed439e690bfa1c2020de64a5f572be72.webp" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026">
             </div>
-    <div class="f-oc15"><span></span><span></span><span></span></div>
-</div>
-<ul class="e-pf71 o-of55">
-        </ul>
+                        <a href="contact.html" style="color:#fff;font-weight:600;font-size:.9em;">Kontakt</a>
+            </div>
 
 <header class="j-ho30">
     <div class="n-am22">
@@ -995,7 +1031,8 @@ footer p{
                     </div>
         <div style="display:flex;align-items:center;gap:8px;">
             <ul class="e-pf71">
-                                            </ul>
+                                                    <li><a href="contact.html">Kontakt</a></li>
+                            </ul>
         </div>
     </div>
 </header>
@@ -1028,7 +1065,7 @@ footer p{
                                 <div>
                                             <strong>Karolína Šimánková</strong>
                                                                 <span class="l-mf685">Online kasinová redaktorka a poradkyně</span>
-                                        <span>Posledná aktualizácia: 21 května 2026</span>
+                                        <span>Posledná aktualizácia: 25 května 2026</span>
                                     </div>
             </div>
                                                 <a href="#m-di602" class="k-bj27">
@@ -1056,52 +1093,52 @@ footer p{
                                 <div class="k-oh41">
                     <div class="d-gf111">#2</div>
                                         <div class="o-pp90">
-                        <img src="img/45fcad814e040c52d51d436d2f24a710.webp" alt="Stonevegas">
+                        <img src="img/b33f56c3d7d46ece5ec11b2613e1989c.webp" alt="Spinboss">
                     </div>
                                         <div class="h-nl431">
                         
-                        <span>Stonevegas</span>
+                        <span>Spinboss</span>
                         <span class="c-jm32">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                            5/5
                         </span>
                     </div>
 
-                                        <div class="e-ag65">100% až do 12 500 Kč + 200 FS</div>
-                                                            <a href="/bet527/stonevegas/" class="i-ml14" target="_blank" rel="nofollow noopener">
+                                        <div class="e-ag65">400% AŽ 375 000 KČ + 400 FS</div>
+                                                            <a href="/bet527/spinboss/" class="i-ml14" target="_blank" rel="nofollow noopener">
                         Hraji hned                    </a>
                                     </div>
                                 <div class="k-oh41">
                     <div class="d-gf111">#3</div>
                                         <div class="o-pp90">
-                        <img src="img/52988a82af36bcc5a87b486b79e247c4.webp" alt="AlterSpin">
+                        <img src="img/c8b947495862cb213abe0d5e75ca7ef2.webp" alt="Lolajack">
                     </div>
                                         <div class="h-nl431">
                         
-                        <span>AlterSpin</span>
+                        <span>Lolajack</span>
                         <span class="c-jm32">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                            5/5
                         </span>
                     </div>
 
-                                        <div class="e-ag65">250% až 75 000 Kč + 350 FS + 1 Bonus Crab</div>
-                                                            <a href="/best535/alterspin/" class="i-ml14" target="_blank" rel="nofollow noopener">
+                                        <div class="e-ag65">400% až do 375 000 Kč + 400 FS</div>
+                                                            <a href="/best535/lolajack/" class="i-ml14" target="_blank" rel="nofollow noopener">
                         Hraji hned                    </a>
                                     </div>
                                 <div class="k-oh41">
                     <div class="d-gf111">#4</div>
                                         <div class="o-pp90">
-                        <img src="img/138fd5eabc7b3828ed9ad3e698135b3d.webp" alt="QuickWin">
+                        <img src="img/5d43ec49a9988675f93c6d074d46dccd.webp" alt="Wildsino">
                     </div>
                                         <div class="h-nl431">
                         
-                        <span>QuickWin</span>
+                        <span>Wildsino</span>
                         <span class="c-jm32">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                            5/5
                         </span>
                     </div>
 
-                                        <div class="e-ag65">100% AŽ DO 12 500 KČ + 200 FS</div>
-                                                            <a href="/golden396/quickwin/" class="i-ml14" target="_blank" rel="nofollow noopener">
+                                        <div class="e-ag65">Až 62 500 Kč ve 3 bonusech + 1 Bonus Crab + 300 Free Spiny</div>
+                                                            <a href="/golden396/wildsino/" class="i-ml14" target="_blank" rel="nofollow noopener">
                         Hraji hned                    </a>
                                     </div>
                             </div>
@@ -1114,104 +1151,291 @@ footer p{
 
         <span id="m-di602" style="display:block;height:0;overflow:hidden;"></span>
                 
-                <table class="d-ka24">
-    <thead class="g-kb04">
-        <tr>
-            <th>№</th>
-            <th>Mezinárodní casina</th>
-            <th>Bonus bez vkladu</th>
-            <th>Přehled</th>
-            <th>Recenze</th>
-            <th>Nabídka</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="j-di31">
-        <td class="b-bf59">1</td>
-        <td class="a-ni53">
-                            <img src="img/1972f424b9e159f3a3a63f8a7dfa61c2.webp" alt="Casea">
-                    </td>
-        <td class="l-en46">250% až do 75 000 Kč + 350 FS</td>
-        <td class="c-of438">
-            <div class="k-da39">Casea</div>
-            <span class="m-nn248">★★★★★&nbsp;5</span>
-        </td>
-        <td class="d-ji98">
-                        <span class="d-eb019">✓&nbsp;Minimální vklad již od 5 €</span>
-                        <span class="d-eb019">✓&nbsp;Široká nabídka her od předních vývojářů</span>
-                        <span class="d-eb019">✓&nbsp;Rychlé výplaty bez zbytečného čekání</span>
-                        <span class="d-eb019">✓&nbsp;Licencované a bezpečné kasino</span>
-                    </td>
-        <td class="e-fl253">
-                            <a href="/jackpot269/casea/" target="_blank" rel="nofollow noopener">
-                    Hraji hned                </a>
-                    </td>
-    </tr>
-        <tr class="j-di31">
-        <td class="b-bf59">2</td>
-        <td class="a-ni53">
-                            <img src="img/45fcad814e040c52d51d436d2f24a710.webp" alt="Stonevegas">
-                    </td>
-        <td class="l-en46">100% až 12 500 Kč + 200 FS!</td>
-        <td class="c-of438">
-            <div class="k-da39">Stonevegas</div>
-            <span class="m-nn248">★★★★★&nbsp;5</span>
-        </td>
-        <td class="d-ji98">
-                        <span class="d-eb019">✓&nbsp;Licence: Anjouan</span>
-                        <span class="d-eb019">✓&nbsp;Minimální vklad: €10</span>
-                        <span class="d-eb019">✓&nbsp;Maximální výběr: 50 000 Kč</span>
-                    </td>
-        <td class="e-fl253">
-                            <a href="/spin901/stonevegas/" target="_blank" rel="nofollow noopener">
-                    Hraji hned                </a>
-                    </td>
-    </tr>
-        <tr class="j-di31">
-        <td class="b-bf59">3</td>
-        <td class="a-ni53">
-                            <img src="img/52988a82af36bcc5a87b486b79e247c4.webp" alt="AlterSpin">
-                    </td>
-        <td class="l-en46">250% do 75 000 Kč + 350 FS + 1 Bonus Crab</td>
-        <td class="c-of438">
-            <div class="k-da39">AlterSpin</div>
-            <span class="m-nn248">★★★★★&nbsp;5</span>
-        </td>
-        <td class="d-ji98">
-                        <span class="d-eb019">✓&nbsp;Uvítací bonus 250 % až 75 000 Kč</span>
-                        <span class="d-eb019">✓&nbsp;350 free spinů po registraci</span>
-                        <span class="d-eb019">✓&nbsp;Výběry až 50 000 Kč denně</span>
-                        <span class="d-eb019">✓&nbsp;Vklad od 200 Kč</span>
-                    </td>
-        <td class="e-fl253">
-                            <a href="/mega271/alterspin/" target="_blank" rel="nofollow noopener">
-                    Hraji hned                </a>
-                    </td>
-    </tr>
-        <tr class="j-di31">
-        <td class="b-bf59">4</td>
-        <td class="a-ni53">
-                            <img src="img/138fd5eabc7b3828ed9ad3e698135b3d.webp" alt="QuickWin">
-                    </td>
-        <td class="l-en46">100% AŽ DO 12 500 KČ + 200 FS</td>
-        <td class="c-of438">
-            <div class="k-da39">QuickWin</div>
-            <span class="m-nn248">★★★★★&nbsp;5</span>
-        </td>
-        <td class="d-ji98">
-                        <span class="d-eb019">✓&nbsp;Licence: Curacao (8048/JAZ2020-001)</span>
-                        <span class="d-eb019">✓&nbsp;Minimální vklad: €10</span>
-                        <span class="d-eb019">✓&nbsp;Maximální výběr: €7.000/měsíc (€20.000 pro VIP)</span>
-                    </td>
-        <td class="e-fl253">
-                            <a href="/top726/quickwin/" target="_blank" rel="nofollow noopener">
-                    Hraji hned                </a>
-                    </td>
-    </tr>
-        </tbody>
-</table>
-
-                
+        <div class="f-gd75">
+        
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <img src="img/7a99e365eded1b16ab51bfd0ab3961b9.webp" alt="1">
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/1972f424b9e159f3a3a63f8a7dfa61c2.webp" alt="Casea">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">Casea</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/f21baf1d7d6502ae15b4c08e5788d357.webp" alt="" loading="lazy">
+                                    <img src="img/b686f3ff7f806f29d683b60af1c9531d.webp" alt="" loading="lazy">
+                                    <img src="img/3f86f7b833679b6782b5e22374ae9ddf.webp" alt="" loading="lazy">
+                                    <img src="img/0a849824ac66ef15553adb100bd609c5.webp" alt="" loading="lazy">
+                                    <img src="img/201e5bd36197d2f16811d77d9e01ed68.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">250% až do 75 000 Kč + 350 FS</div>
+                        <div class="o-pc35">
+                                    <a href="/jackpot269/casea/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <img src="img/59d7a908915ee10389acbd3f1899455d.webp" alt="2">
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/b33f56c3d7d46ece5ec11b2613e1989c.webp" alt="Spinboss">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">Spinboss</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/201e5bd36197d2f16811d77d9e01ed68.webp" alt="" loading="lazy">
+                                    <img src="img/8a4d46c6cd86da2d0e1ef2c3489443f0.webp" alt="" loading="lazy">
+                                    <img src="img/ed130c1d0c53b2e426720783c0ddf933.webp" alt="" loading="lazy">
+                                    <img src="img/acb3280a7d35220ad051a9b4380c9d46.webp" alt="" loading="lazy">
+                                    <img src="img/9fa98bee509bcc7e43575b7eb98d8cf3.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">400% DO 375 000 KČ + 400 FS</div>
+                        <div class="o-pc35">
+                                    <a href="/spin901/spinboss/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <img src="img/c66604f5f42102f0d70cffee73d94b41.webp" alt="3">
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/c8b947495862cb213abe0d5e75ca7ef2.webp" alt="Lolajack">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">Lolajack</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/9fa98bee509bcc7e43575b7eb98d8cf3.webp" alt="" loading="lazy">
+                                    <img src="img/4212c178d23e5c0ef3fc27a59eafe397.webp" alt="" loading="lazy">
+                                    <img src="img/3d122ed35b542c4009fa86b3d751950f.webp" alt="" loading="lazy">
+                                    <img src="img/7b3f5fea7809ca568ca6d930a775c627.webp" alt="" loading="lazy">
+                                    <img src="img/d01a5ac28f1d06016e0d4fa16189071e.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">400% až 375 000 Kč + 400 FS</div>
+                        <div class="o-pc35">
+                                    <a href="/mega271/lolajack/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <span>04</span>
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/5d43ec49a9988675f93c6d074d46dccd.webp" alt="Wildsino">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">Wildsino</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/d01a5ac28f1d06016e0d4fa16189071e.webp" alt="" loading="lazy">
+                                    <img src="img/044e6bfb3c40a2ae05edc86b902d8ba8.webp" alt="" loading="lazy">
+                                    <img src="img/ba712613e0bc96bebb8b25d59c1a757c.webp" alt="" loading="lazy">
+                                    <img src="img/608a76a54b8758e8379c5298093ffa3d.webp" alt="" loading="lazy">
+                                    <img src="img/a6c74bd85fe50eb4bb6c57af4184fb39.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">Až 62 500 Kč ve 3 bonusech + 1 Bonus Crab + 300 Free Spiny</div>
+                        <div class="o-pc35">
+                                    <a href="/top726/wildsino/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <span>05</span>
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/b6e775fcd2276b7ba7aafee7c7af1973.webp" alt="SlotLair">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">SlotLair</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/a6c74bd85fe50eb4bb6c57af4184fb39.webp" alt="" loading="lazy">
+                                    <img src="img/79892ac3476ed41f5d5f59dfd0cef86d.webp" alt="" loading="lazy">
+                                    <img src="img/beb929800590a8f9a37f1e40466c2d6f.webp" alt="" loading="lazy">
+                                    <img src="img/39498e3a6fa9c4997594df34da1bd7fb.webp" alt="" loading="lazy">
+                                    <img src="img/ac682c6475ec788fa47c6d493ead8102.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">DO 75 000 KČ + 450 FS</div>
+                        <div class="o-pc35">
+                                    <a href="/play531/slotlair/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <span>06</span>
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/45fcad814e040c52d51d436d2f24a710.webp" alt="Stonevegas">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">Stonevegas</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/ac682c6475ec788fa47c6d493ead8102.webp" alt="" loading="lazy">
+                                    <img src="img/7b6d97520bfa026fdba76a9a03ade13f.webp" alt="" loading="lazy">
+                                    <img src="img/9ec4c8d53db73bec1395adf4acd5e6e5.webp" alt="" loading="lazy">
+                                    <img src="img/899b49c99b69a44844a1ef8696dee3d1.webp" alt="" loading="lazy">
+                                    <img src="img/d1e2889f46fc28c94598e846bc839c71.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">100% až do 12 500 Kč + 200 FS</div>
+                        <div class="o-pc35">
+                                    <a href="/best246/stonevegas/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <span>07</span>
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/000d0f46291c69d4e16590658aa954e3.webp" alt="GoldSpin">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">GoldSpin</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/d1e2889f46fc28c94598e846bc839c71.webp" alt="" loading="lazy">
+                                    <img src="img/3bf52f0cb0e40ef141b98cae1b705364.webp" alt="" loading="lazy">
+                                    <img src="img/5c30bd1b3ccb2c4e37173b88dc9bb1f3.webp" alt="" loading="lazy">
+                                    <img src="img/fb8d207e5d5aa00fb7ea1c7d13648268.webp" alt="" loading="lazy">
+                                    <img src="img/89131885ef5eabaf0bf3af0eb3f5be64.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">Bonus 100 % až na $2 250 + 100 free spinů</div>
+                        <div class="o-pc35">
+                                    <a href="/win466/goldspin/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <span>08</span>
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/1fcba8c887e9d0ada23619421f700a18.webp" alt="SpinAura">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">SpinAura</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/89131885ef5eabaf0bf3af0eb3f5be64.webp" alt="" loading="lazy">
+                                    <img src="img/61dbfcaa4feac669362224578ca5046c.webp" alt="" loading="lazy">
+                                    <img src="img/096bd66e7e6406e506ed4c8c75953ed0.webp" alt="" loading="lazy">
+                                    <img src="img/e8944d9b96d0ce587fe337d651a8593f.webp" alt="" loading="lazy">
+                                    <img src="img/84f4f29d2aa6e145564046c9fd246142.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">100% DO 50 000 CZK + 200 FS</div>
+                        <div class="o-pc35">
+                                    <a href="/spin288/spinaura/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <span>09</span>
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/138fd5eabc7b3828ed9ad3e698135b3d.webp" alt="QuickWin">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">QuickWin</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/84f4f29d2aa6e145564046c9fd246142.webp" alt="" loading="lazy">
+                                    <img src="img/aaa0e50654d193920272b0b96841de8e.webp" alt="" loading="lazy">
+                                    <img src="img/74019e9b1bbc3fb7022098082f588019.webp" alt="" loading="lazy">
+                                    <img src="img/d9a474b9e7ddd415dad4200385dd99e5.webp" alt="" loading="lazy">
+                                    <img src="img/1dea6fa4be1a1f14cd3c246c6b45d2d6.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">100% bonus do 12 500 Kč a 200 free spinů!</div>
+                        <div class="o-pc35">
+                                    <a href="/bet176/quickwin/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+                <div class="j-ij42">
+            <div class="b-pg31">
+                                    <span>10</span>
+                            </div>
+            <div class="i-ok54">
+                                    <img src="img/52988a82af36bcc5a87b486b79e247c4.webp" alt="AlterSpin">
+                            </div>
+            <div class="g-pm49">
+                <div class="p-mb32">AlterSpin</div>
+                <div class="c-im887">
+                    <span class="j-no08">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#ff3b4f"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg>                    </span>
+                    <span>5/5</span>
+                </div>
+            </div>
+            <div class="c-cp36">
+                                    <img src="img/1dea6fa4be1a1f14cd3c246c6b45d2d6.webp" alt="" loading="lazy">
+                                    <img src="img/cfd1de3db9887b1ae1ad82f8fe926bc3.webp" alt="" loading="lazy">
+                                    <img src="img/cf5c5e1b3b91bda61b2fdd338ee07733.webp" alt="" loading="lazy">
+                                    <img src="img/de60cab2b183e92fa6baf52adae354ab.webp" alt="" loading="lazy">
+                                    <img src="img/9a7b7f3dfd01e2a8dec38b9a844843de.webp" alt="" loading="lazy">
+                            </div>
+                        <div class="i-np09">250% až do 75 000 Kč + 350 FS + 1 Bonus Crab</div>
+                        <div class="o-pc35">
+                                    <a href="/top866/alterspin/" class="n-hn43" target="_blank">
+                        Hraji hned                    </a>
+                            </div>
+        </div>
+        
+                </div>
+        
         <span id="p-fc602" style="display:block;height:0;overflow:hidden;"></span>
                 <div class="i-pb53">
             <p>Zákon č. 186/2016 Sb. o hazardních hrách, který spravuje <strong>Ministerstvo financí ČR</strong>, zakazuje tuzemským operátorům nabízet bonusy bez vkladu v klasickém slova smyslu a přísně omezuje výši vítacích bonusů. Výsledek? Český hráč s vkladem <strong>5 000 Kč</strong> získá u MfČR-licencovaného kasina průměrný bonus kolem 2 000–3 000 Kč s wagering podmínkou, která reálnou hodnotu stlačí blízko nuly. Naproti tomu offshore kasina pod maltskou licencí MGA nebo kuracaoskou regulací nabízejí od 100 % do 200 % match bonusů s odlišnou matematikou. Podle dat <strong>H2 Gambling Capital</strong> dosáhl český online herní trh v roce 2024 hrubých herních výnosů přibližně <strong>19,2 miliardy Kč</strong> – a velká část tohoto obratu plyne přes zahraniční platformy, které lákají právě výhodnějšími bonusovými podmínkami.</p>
@@ -1497,10 +1721,9 @@ footer p{
                 <div class="k-dh52">Autor:</div>
         <div class="b-oc883">Karolína Šimánková</div>
         <div class="e-ck308">Online kasinová redaktorka a poradkyně</div>        <div class="l-pa847">
-                                        <a href="mailto:karolina.Šimankova@krmivo-granule-pro-psy.cz" class="b-lf62">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    Email
-                </a>
+                                        <a href="contact.html" class="b-lf62">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Kontakt                </a>
                     </div>
                     <div class="p-jd12">Karolína má osm let zkušeností v kasinovém průmyslu a specializuje se na bonusové strategie a zodpovědné hraní.</div>
                             <div class="l-lm73">
@@ -1552,7 +1775,13 @@ footer p{
             <div class="f-cd96">
                 <ul class="c-bc09">
                                         <li>
-                                                <img src="img/85f7e83897e0e959ac79259717f60c3d.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
+                                                <img src="img/e852c73a0b4bf55adec220d2533d696a.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
+                                            </li>
+                                        <li>
+                                                <img src="img/f43bb855c269024ca21545985966fc2d.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
+                                            </li>
+                                        <li>
+                                                <img src="img/56acb20d1a1ee503aa996a6af358ce2e.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
                                             </li>
                                         <li>
                                                 <img src="img/534e94975a9dcd8ee4fd2d7b0a78653f.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
@@ -1561,22 +1790,16 @@ footer p{
                                                 <img src="img/cd9b8fd0a8e01361b35dc18219b0cf00.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
                                             </li>
                                         <li>
-                                                <img src="img/e852c73a0b4bf55adec220d2533d696a.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
+                                                <img src="img/1dd8f5fac737bdf0f188ad38797b955f.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
+                                            </li>
+                                        <li>
+                                                <img src="img/85f7e83897e0e959ac79259717f60c3d.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
                                             </li>
                                         <li>
                                                 <img src="img/824605a96040e8b85a1aafe1272d4542.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
                                             </li>
                                         <li>
-                                                <img src="img/1dd8f5fac737bdf0f188ad38797b955f.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
-                                            </li>
-                                        <li>
-                                                <img src="img/56acb20d1a1ee503aa996a6af358ce2e.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
-                                            </li>
-                                        <li>
                                                 <img src="img/4c3aa0eaceb79c746b971aa9b5d885fa.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
-                                            </li>
-                                        <li>
-                                                <img src="img/f43bb855c269024ca21545985966fc2d.svg" alt="Německé online casino bonus bez vkladu – 10 nejlepších nabídek pro české hráče 2026" style="max-height:36px;">
                                             </li>
                                     </ul>
             </div>
@@ -1587,15 +1810,17 @@ footer p{
             </div>
 </footer>
 
-    <div class="m-ld793" style="background:#6b1a2a;">
-        <span class="m-dn323">&times;</span>
-        <div class="g-ob37">
-            <img src="img/1972f424b9e159f3a3a63f8a7dfa61c2.webp" alt="Casino">            <div class="k-fk43">
-                <p class="l-cg25">250% až 75 000 Kč + 350 FS</p>
+    <div class="m-ld793" style="background:#70142c;">
+        <div class="n-am22">
+            <span class="m-dn323">&times;</span>
+            <div class="g-ob37">
+                <img src="img/1972f424b9e159f3a3a63f8a7dfa61c2.webp" alt="Casino">                <div class="k-fk43">
+                    <p class="l-cg25">250% do 75 000 Kč + 350 FS</p>
+                </div>
             </div>
+            <a href="/jackpot635/casea/" style="background:linear-gradient(90deg, #ff756b 0%, #ff5454 100%), #f59e0b !important;">
+                Hraji hned            </a>
         </div>
-        <a href="/mega958/casea/" style="background:#c93050 !important;">
-            Hraji hned        </a>
     </div>
 
 <script>
